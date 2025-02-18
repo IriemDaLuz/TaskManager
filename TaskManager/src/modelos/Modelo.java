@@ -18,7 +18,7 @@ public class Modelo {
         try {
             pb.start(); 
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Error al lanzar el proceso: " + proceso, "", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error al lanzar el proceso");
             e.printStackTrace();
         }
     }
@@ -30,9 +30,9 @@ public class Modelo {
             Process p = pb.start();
             int codRet = p.waitFor();
             if (codRet != 0) {
-                System.out.println("Error al eliminar el proceso con PID: " + pid + ". Código: " + codRet);
+                System.out.println("Error al eliminar el proceso ");
             } else {
-                System.out.println("Proceso con PID " + pid + " eliminado.");
+                System.out.println("Proceso eliminado.");
             }
             return codRet;
 
